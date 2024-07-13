@@ -19,7 +19,7 @@ if ENV['CI']
   Coveralls.wear!
 end
 
-require 'graphql_auth'
+require 'graphql_authentication'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -49,6 +49,6 @@ RSpec.configure do |config|
 
   config.before do
     Devise.mailer_sender = 'noreply@domain.com'
-    allow(GraphQL::Auth.configuration).to receive(:jwt_secret_key).and_return('jwt_secret_key')
+    allow(GraphQL::Authentication.configuration).to receive(:jwt_secret_key).and_return('jwt_secret_key')
   end
 end

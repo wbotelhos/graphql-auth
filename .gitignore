@@ -19,3 +19,4 @@ spec/dummy/tmp/
 
 .rspec_status
 .tool-versions
+*.gem

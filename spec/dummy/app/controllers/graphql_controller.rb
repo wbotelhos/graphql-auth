@@ -1,5 +1,5 @@
 class GraphqlController < ActionController::API
-  include Graphql::AuthHelper
+  include Graphql::AuthenticationHelper
 
   def execute
     variables = ensure_hash(params[:variables])

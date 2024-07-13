@@ -3,7 +3,7 @@ require_relative 'boot'
 require 'rails/all'
 
 Bundler.require(*Rails.groups)
-require 'graphql_auth'
+require 'graphql_authentication'
 
 module Dummy
   class Application < Rails::Application

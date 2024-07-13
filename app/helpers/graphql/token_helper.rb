@@ -5,13 +5,13 @@
 module Graphql
   module TokenHelper
     def generate_access_token(user, response)
-      token = GraphQL::Auth::JwtManager.issue_with_expiration({ user: user.id }) # TODO use uuid
+      token = GraphQL::Authentication::JwtManager.issue_with_expiration({ user: user.id }) # TODO use uuid
       response.set_header 'Authorization', token
-      response.set_header 'Expires', GraphQL::Auth::JwtManager.token_expiration(token)
+      response.set_header 'Expires', GraphQL::Authentication::JwtManager.token_expiration(token)
     end
 
     def set_refresh_token(user, response)
-      refresh_token = user.refresh_token.presence || GraphQL::Auth::JwtManager.issue_without_expiration({ user: user.id })
+      refresh_token = user.refresh_token.presence || GraphQL::Authentication::JwtManager.issue_without_expiration({ user: user.id })
       user.update_column :refresh_token, refresh_token
       response.set_header 'RefreshToken', refresh_token
     end

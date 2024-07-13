@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0
+
+### News
+
+- This gem was forked
+- Supports Rails 7.x
+
 ## 0.6.1
 
 Multiple fixes to allow usage of the gem without the lockable Devise
@@ -31,12 +38,12 @@ Please make sure to update your config file with the current version.
 
 The updated config file should look like this:
 ```
-GraphQL::Auth.configure do |config|
+GraphQL::Authentication.configure do |config|
   # config.token_lifespan = 4.hours
   # config.jwt_secret_key = ENV['JWT_SECRET_KEY']
   # config.app_url = ENV['APP_URL']
 
-  # config.user_type = '::Types::Auth::User'
+  # config.user_type = '::Types::Authentication::User'
 
   # Devise allowed actions
   # Don't forget to enable the lockable setting in your Devise user model if you plan on using the lock_account feature
@@ -45,7 +52,7 @@ GraphQL::Auth.configure do |config|
   # config.allow_unlock_account = false
 
   # Allow custom mutations for signup and update account
-  # config.sign_up_mutation = '::Mutations::Auth::SignUp'
-  # config.update_account_mutation = '::Mutations::Auth::UpdateAccount'
+  # config.sign_up_mutation = '::Mutations::Authentication::SignUp'
+  # config.update_account_mutation = '::Mutations::Authentication::UpdateAccount'
 end
 ```

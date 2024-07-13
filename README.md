@@ -1,17 +1,17 @@
-# GraphQL Auth
+# GraphQL Authentication
 
-[![Build Status](https://travis-ci.org/wbotelhos/graphql_auth.svg?branch=master)](https://travis-ci.org/wbotelhos/graphql_auth) [![Maintainability](https://api.codeclimate.com/v1/badges/7e2515bb59f0b205a603/maintainability)](https://codeclimate.com/github/wbotelhos/graphql_auth/maintainability)
-[![Downloads](https://img.shields.io/gem/dt/graphql_auth.svg)](https://rubygems.org/gems/graphql_auth)
-[![Latest Version](https://img.shields.io/gem/v/graphql_auth.svg)](https://rubygems.org/gems/graphql_auth)
+[![Build Status](https://travis-ci.org/wbotelhos/graphql_authentication.svg?branch=master)](https://travis-ci.org/wbotelhos/graphql_authentication) [![Maintainability](https://api.codeclimate.com/v1/badges/7e2515bb59f0b205a603/maintainability)](https://codeclimate.com/github/wbotelhos/graphql_authentication/maintainability)
+[![Downloads](https://img.shields.io/gem/dt/graphql_authentication.svg)](https://rubygems.org/gems/graphql_authentication)
+[![Latest Version](https://img.shields.io/gem/v/graphql_authentication.svg)](https://rubygems.org/gems/graphql_authentication)
 
-This gem provides an authentication mechanism on a GraphQL API. It use JSON Web Token (JWT) and Devise logic.
+This gem provides an authenticationentication mechanism on a GraphQL API. It use JSON Web Token (JWT) and Devise logic.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'graphql_auth'
+gem 'graphql_authentication'
 ```
 
 And then execute:
@@ -20,12 +20,12 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install graphql_auth
+    $ gem install graphql_authentication
 
-Then run the installer to create `graphql_auth.rb` file in your initializers folder.
+Then run the installer to create `graphql_authentication.rb` file in your initializers folder.
 
 ```
-rails g graphql_auth:install
+rails g graphql_authentication:install
 ```
 
 Make sure to read all configurations present inside the file and fill them with your own configs.
@@ -64,12 +64,12 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 end
 ```
 
-Make sure to include `Graphql::AuthHelper` in your `GraphqlController`. A context method returning the current_user will be available
+Make sure to include `Graphql::AuthenticationHelper` in your `GraphqlController`. A context method returning the current_user will be available
 
 ```ruby
 class GraphqlController < ActionController::API
 
-  include Graphql::AuthHelper
+  include Graphql::AuthenticationHelper
 
   def execute
     variables = ensure_hash(params[:variables])
@@ -81,11 +81,11 @@ class GraphqlController < ActionController::API
     ...
 ```
 
-Make sure to implement `GraphqlAuth` in your `MutationType` to make auth mutations available
+Make sure to implement `GraphqlAuthentication` in your `MutationType` to make authentication mutations available
 
 ```ruby
 class Types::MutationType < Types::BaseObject
-  implements ::Types::GraphqlAuth
+  implements ::Types::GraphqlAuthentication
 end
 ```
 
@@ -94,12 +94,12 @@ end
 If you can to customize any mutation, make sure to update the configurations
 
 ```ruby
-GraphQL::Auth.configure do |config|
+GraphQL::Authentication.configure do |config|
   # config.token_lifespan = 4.hours
   # config.jwt_secret_key = ENV['JWT_SECRET_KEY']
   # config.app_url = ENV['APP_URL']
 
-  # config.user_type = '::Types::Auth::User'
+  # config.user_type = '::Types::Authentication::User'
 
   # Devise allowed actions
   # Don't forget to enable the lockable setting in your Devise user model if you plan on using the lock_account feature
@@ -108,8 +108,8 @@ GraphQL::Auth.configure do |config|
   # config.allow_unlock_account = false
 
   # Allow custom mutations for signup and update account
-  # config.sign_up_mutation = '::Mutations::Auth::SignUp'
-  # config.update_account_mutation = '::Mutations::Auth::UpdateAccount'
+  # config.sign_up_mutation = '::Mutations::Authentication::SignUp'
+  # config.update_account_mutation = '::Mutations::Authentication::UpdateAccount'
 end
 ```
 
@@ -117,11 +117,11 @@ end
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `graphql_auth.gemspec`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `graphql_authentication.gemspec`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/wbotelhos/graphql_auth. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/wbotelhos/graphql_authentication. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -129,4 +129,4 @@ The gem is available as open source under the terms of the [MIT License](http://
 
 ## Code of Conduct
 
-Everyone interacting in the GraphQL Auth project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/wbotelhos/graphql_auth/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the GraphQL Authentication project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/wbotelhos/graphql_authentication/blob/master/CODE_OF_CONDUCT.md).

@@ -7,7 +7,7 @@ module Graphql
     end
 
     def lockable?
-      GraphQL::Auth.configuration.allow_lock_account
+      GraphQL::Authentication.configuration.allow_lock_account
     end
 
   end

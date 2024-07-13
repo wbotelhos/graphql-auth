@@ -2,6 +2,6 @@
 
 module Types
   class MutationType < Types::BaseObject
-    implements ::Types::GraphqlAuth
+    implements ::Types::GraphqlAuthentication
   end
 end
