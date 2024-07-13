@@ -6,5 +6,5 @@ gem 'rails', '~> 5.2'
 
 gem 'graphql', '~> 1.9.6'
 
-# Specify your gem's dependencies in graphql-auth.gemspec
+# Specify your gem's dependencies in graphql_auth.gemspec
 gemspec

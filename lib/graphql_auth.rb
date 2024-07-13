@@ -1,9 +1,9 @@
 require 'devise'
 require 'graphql'
-require 'graphql-auth/configuration'
-require 'graphql-auth/engine'
-require 'graphql-auth/reset_password'
-require 'graphql-auth/jwt_manager'
+require 'graphql_auth/configuration'
+require 'graphql_auth/engine'
+require 'graphql_auth/reset_password'
+require 'graphql_auth/jwt_manager'
 
 module GraphQL
   module Auth
@@ -17,5 +17,3 @@ module GraphQL
     end
   end
 end
-
-

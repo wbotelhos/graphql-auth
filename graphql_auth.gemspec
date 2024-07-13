@@ -1,16 +1,16 @@
 $:.push File.expand_path("lib", __dir__)
 
-require "graphql-auth/version"
+require "graphql_auth/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = 'graphql-auth'
+  spec.name          = 'graphql_auth'
   spec.version       = GraphQL::Auth::VERSION
   spec.authors       = ['Guillaume Ferland', 'Brice Sanchez', 'Guillaume Loubier']
   spec.email         = ['ferland182@gmail.com']
   spec.platform      = Gem::Platform::RUBY
   spec.summary       = %q{GraphQL + JWT + Devise}
   spec.description   = %q{GraphQL + JWT + Devise}
-  spec.homepage      = 'https://github.com/o2web/graphql-auth'
+  spec.homepage      = 'https://github.com/o2web/graphql_auth'
   spec.license       = 'MIT'
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md", "CHANGELOG.md"]

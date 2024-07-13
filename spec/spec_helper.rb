@@ -19,7 +19,7 @@ if ENV['CI']
   Coveralls.wear!
 end
 
-require 'graphql-auth'
+require 'graphql_auth'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
