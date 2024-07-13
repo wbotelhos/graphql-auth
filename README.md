@@ -1,6 +1,6 @@
 # GraphQL Auth
 
-[![Build Status](https://travis-ci.org/o2web/graphql_auth.svg?branch=master)](https://travis-ci.org/o2web/graphql_auth) [![Maintainability](https://api.codeclimate.com/v1/badges/7e2515bb59f0b205a603/maintainability)](https://codeclimate.com/github/o2web/graphql_auth/maintainability)
+[![Build Status](https://travis-ci.org/wbotelhos/graphql_auth.svg?branch=master)](https://travis-ci.org/wbotelhos/graphql_auth) [![Maintainability](https://api.codeclimate.com/v1/badges/7e2515bb59f0b205a603/maintainability)](https://codeclimate.com/github/wbotelhos/graphql_auth/maintainability)
 [![Downloads](https://img.shields.io/gem/dt/graphql_auth.svg)](https://rubygems.org/gems/graphql_auth)
 [![Latest Version](https://img.shields.io/gem/v/graphql_auth.svg)](https://rubygems.org/gems/graphql_auth)
 
@@ -121,7 +121,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/o2web/graphql_auth. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/wbotelhos/graphql_auth. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -129,4 +129,4 @@ The gem is available as open source under the terms of the [MIT License](http://
 
 ## Code of Conduct
 
-Everyone interacting in the GraphQL Auth project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/o2web/graphql_auth/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the GraphQL Auth project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/wbotelhos/graphql_auth/blob/master/CODE_OF_CONDUCT.md).

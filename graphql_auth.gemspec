@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.platform      = Gem::Platform::RUBY
   spec.summary       = %q{GraphQL + JWT + Devise}
   spec.description   = %q{GraphQL + JWT + Devise}
-  spec.homepage      = 'https://github.com/o2web/graphql_auth'
+  spec.homepage      = 'https://github.com/wbotelhos/graphql_auth'
   spec.license       = 'MIT'
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md", "CHANGELOG.md"]
